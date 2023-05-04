@@ -25,7 +25,7 @@ const BlogPost = ({ data, children }) => {
         )
 }
 
- export const query = graphql`
+  export const query = graphql`
   query($id: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
@@ -35,13 +35,13 @@ const BlogPost = ({ data, children }) => {
         hero_image_credit_link
         hero_image_credit_text
         hero_image {
-        childrenImageSharp {
-          gatsbyImageData
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
   }
-}
 `
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
