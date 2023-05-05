@@ -14,7 +14,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@formspree/react": "^2.4.1",
     "@mdx-js/react": "^2.3.0",
     "engine.io": "^6.4.1",
     "gatsby": "^5.3.3",
