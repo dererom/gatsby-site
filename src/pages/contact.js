@@ -23,9 +23,6 @@ const ContactPage = () => {
                     Message
                     <textarea name="message" id="message" rows="5"/>
                 </label>
-                <label>
-                    <input type="text" name="_gotcha" style="display:none"/>
-                </label>
                 <button type="submit">Send</button>
                 <input type="reset" value="Clear"/>
             </form>
