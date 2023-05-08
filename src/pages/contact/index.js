@@ -1,6 +1,7 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../../components/layout'
+import Seo from '../../components/seo'
+import Form from './captcha'
 
 // Step 2: Define your component
 const ContactPage = () => {
@@ -34,3 +35,7 @@ export const Head = () => <Seo title="Contact"/>
 
 // Step 3: Export your component
 export default ContactPage
+
+console.log(Form)
+
+
