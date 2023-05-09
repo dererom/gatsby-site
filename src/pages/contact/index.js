@@ -1,10 +1,29 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
-import Form from './captcha'
+import { useEffect, useRef, useState } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 // Step 2: Define your component
 const ContactPage = () => {
+    const [token, setToken] = useState(null);
+    const captchaRef = useRef(null);
+
+    const onLoad = () => {
+        // this reaches out to the hCaptcha JS API and runs the
+        // execute function on it. you can use other functions as
+        // documented here:
+        // https://docs.hcaptcha.com/configuration#jsapi
+        captchaRef.current.execute();
+    };
+
+    useEffect(() => {
+
+        if (token)
+            console.log(`hCaptcha Token: ${token}`);
+
+        }, [token]);
+
     return (
         <Layout pageTitle="About Me">
             <form method="post" action="https://formspree.io/f/xpzebyvq">
@@ -24,6 +43,12 @@ const ContactPage = () => {
                     Message
                     <textarea name="message" id="message" rows="5"/>
                 </label>
+                <HCaptcha
+                    sitekey="3498896e-4896-4422-9ad3-945180775c4a"
+                    onLoad={onLoad}
+                    onVerify={setToken}
+                    ref={captchaRef}
+                />
                 <button type="submit">Send</button>
                 <input type="reset" value="Clear"/>
             </form>
@@ -36,6 +61,5 @@ export const Head = () => <Seo title="Contact"/>
 // Step 3: Export your component
 export default ContactPage
 
-console.log(Form)
 
 
