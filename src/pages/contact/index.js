@@ -26,7 +26,7 @@ const ContactPage = () => {
 
     return (
         <Layout pageTitle="About Me">
-            <form method="post" action="https://formspree.io/f/xpzebyvq">
+            <form method="post" action="https://eoy22wh670q3v9t.m.pipedream.net">
                 <span>
                     Name
                     <input type="text" name="name" id="name"/>
