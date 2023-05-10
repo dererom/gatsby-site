@@ -27,10 +27,10 @@ const ContactPage = () => {
     return (
         <Layout pageTitle="About Me">
             <form method="post" action="https://eoy22wh670q3v9t.m.pipedream.net">
-                <span>
+                <label>
                     Name
                     <input type="text" name="name" id="name"/>
-                </span>
+                </label>
                 <label>
                     Email
                     <input type="email" name="_replyto"/>
