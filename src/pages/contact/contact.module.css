@@ -1,0 +1,19 @@
+.nameStyle {
+    margin: 0px 30px 10px;
+}
+.emailStyle {
+    display: block;
+}
+.emailInput {
+    margin: 0px 34px 10px;
+}
+.subjectStyle {
+    margin: 0px 20px 10px;
+}
+.messageStyle {
+    display: block;
+}
+.messageInput {
+    display: block;
+    margin: -22px 75px 10px;
+}
