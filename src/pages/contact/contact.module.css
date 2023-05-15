@@ -1,19 +1,40 @@
+.formStyle {
+    display: flex;
+    flex-direction: column;
+}
 .nameStyle {
-    margin: 0px 30px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nameInput {
+    margin: 0px 276px 10px 0px;
 }
 .emailStyle {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 .emailInput {
-    margin: 0px 34px 10px;
+    margin: 0px 276px 10px 0px;
 }
 .subjectStyle {
-    margin: 0px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.subjectInput {
+    margin: 0px 276px 10px 0px;
 }
 .messageStyle {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 .messageInput {
     display: block;
-    margin: -22px 75px 10px;
+    margin: 0px 255px 10px 0px;
+}
+.sendButton {
+    width: 50px;
+}
+.clearButton {
+    width: 50px;
+    margin: -22px 0px 0px 60px;
 }

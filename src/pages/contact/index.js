@@ -4,12 +4,17 @@ import Seo from '../../components/seo'
 import { useEffect, useRef, useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import {
+    formStyle,
     nameStyle,
+    nameInput,
     emailStyle,
-    subjectStyle,
     emailInput,
+    subjectStyle,
+    subjectInput,
     messageStyle,
-    messageInput
+    messageInput,
+    sendButton,
+    clearButton
 } from './contact.module.css'
 // Step 2: Define your component
 const ContactPage = () => {
@@ -33,21 +38,21 @@ const ContactPage = () => {
 
     return (
         <Layout pageTitle="About Me">
-            <form method="post" action="https://eoy22wh670q3v9t.m.pipedream.net">
-                <label>
-                    Name
-                    <input type="text" name="name" id="name" className={nameStyle}/>
+            <form method="post" action="https://eoy22wh670q3v9t.m.pipedream.net" className={formStyle}>
+                <label className={nameStyle}>
+                    Name:
+                    <input type="text" name="name" id="name" className={nameInput}/>
                 </label>
                 <label className={emailStyle}>
-                    Email
+                    Email:
                     <input type="email" name="_replyto" className={emailInput}/>
                 </label>
-                <label>
-                    Subject
-                    <input type="text" name="subject" id="subject" className={subjectStyle}/>
+                <label className={subjectStyle}>
+                    Subject:
+                    <input type="text" name="subject" id="subject" className={subjectInput}/>
                 </label>
                 <label className={messageStyle}>
-                    Message
+                    Message:
                     <textarea name="message" id="message" rows="5" className={messageInput}/>
                 </label>
                 <HCaptcha
@@ -56,8 +61,8 @@ const ContactPage = () => {
                     onVerify={setToken}
                     ref={captchaRef}
                 />
-                <button type="submit">Send</button>
-                <input type="reset" value="Clear"/>
+                <button type="submit" className={sendButton}>Send</button>
+                <input type="reset" value="Clear" className={clearButton}/>
             </form>
         </Layout>
         )
