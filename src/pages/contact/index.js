@@ -37,22 +37,22 @@ const ContactPage = () => {
         }, [token]);
 
     return (
-        <Layout pageTitle="About Me">
+        <Layout pageTitle="Contact">
             <form method="post" action="https://eoy22wh670q3v9t.m.pipedream.net" className={formStyle}>
                 <label className={nameStyle}>
-                    Name:
+                    <span>Name:</span>
                     <input type="text" name="name" id="name" className={nameInput}/>
                 </label>
                 <label className={emailStyle}>
-                    Email:
+                    <span>Email:</span>
                     <input type="email" name="_replyto" className={emailInput}/>
                 </label>
                 <label className={subjectStyle}>
-                    Subject:
+                    <span>Subject:</span>
                     <input type="text" name="subject" id="subject" className={subjectInput}/>
                 </label>
                 <label className={messageStyle}>
-                    Message:
+                    <span>Message:</span>
                     <textarea name="message" id="message" rows="5" className={messageInput}/>
                 </label>
                 <HCaptcha

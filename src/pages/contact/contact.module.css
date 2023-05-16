@@ -1,35 +1,37 @@
 .formStyle {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 .nameStyle {
-    display: flex;
+    display: grid;
     justify-content: space-between;
 }
 .nameInput {
-    margin: 0px 276px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    width: 180px;
 }
 .emailStyle {
-    display: flex;
+    display: grid;
     justify-content: space-between;
 }
 .emailInput {
-    margin: 0px 276px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    width: 180px;
 }
 .subjectStyle {
-    display: flex;
+    display: grid;
     justify-content: space-between;
 }
 .subjectInput {
-    margin: 0px 276px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    width: 180px;
 }
 .messageStyle {
-    display: flex;
+    display: grid;
     justify-content: space-between;
 }
 .messageInput {
-    display: block;
-    margin: 0px 255px 10px 0px;
+    margin: 10px 0px 15px 0px;
+    width: 180px;
 }
 .sendButton {
     width: 50px;
